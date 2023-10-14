@@ -1,30 +1,29 @@
 body {
-  background: linear-gradient(orange, white, green);
+  background: linear-gradient(Aliceblue, lightblue, cyan);
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  font-family: inter;
+  font-family: cursive;
 }
 
-/* Element | https://shrouded-abiding-haze.glitch.me/ */
+
 
 #previousChapter {
   display: none;
 }
 
-/* Element | https://shrouded-abiding-haze.glitch.me/ */
+
 
 #nextChapter {
   display: none;
 }
 
-/* Element | https://shrouded-abiding-haze.glitch.me/ */
+
 
 #previousSlide {
   /* font-size: 0; */
 }
 
-/* Inline #3 | https://shrouded-abiding-haze.glitch.me/ */
 
 .icon {
   height: 24px;
@@ -46,7 +45,7 @@ body {
   background-image: url("/restart.svg");
 }
 
-/* Inline #3 | https://shrouded-abiding-haze.glitch.me/ */
+
 
 .titles span {
   display: none;
@@ -63,7 +62,7 @@ body {
   width: 90vw;
   padding: 0 5vw;
   position: fixed;
-  background-color: red;
+  background-color: Aliceblue;
   top: 0;
   z-index: 1;
 }
