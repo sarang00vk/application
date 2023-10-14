@@ -1,24 +1,25 @@
 const psb = document.getElementById("previousSlide");
 const nsb = document.getElementById("nextSlide");
 const chv = document.querySelector(".presentation .chapter:first-child");
-const positionIndicator = document.querySelector(".titles .position");
-let currentSlideIndex = 0;
+const pos = document.querySelector(".titles .position");
+const rst = document.getElementById("restart");
+var cs = 0;
 
-function updateSlide() {
-  psb.innerHTML = currentSlideIndex + 1;
-  chv.style.transform = `translateX(${-100 * currentSlideIndex}vw)`;
-}
-
-nsb.addEventListener("click", () => {
-  if (currentSlideIndex < chv.childElementCount - 1) {
-    currentSlideIndex++;
-    updateSlide();
-  }
+nsb.addEventListener("click", (e) => {
+  debugger;
+  if (cs < chv.childElementCount - 1) ++cs;
+  pos.innerHTML = cs + 1;
+  chv.style.transform = "translateX(" + -100 * cs + "vw)";
 });
 
-psb.addEventListener("click", () => {
-  if (currentSlideIndex > 0) {
-    currentSlideIndex--;
-    updateSlide();
-  }
+psb.addEventListener("click", (e) => {
+  if (cs != 0) --cs;
+  pos.innerHTML = cs + 1;
+  chv.style.transform = "translateX(" + -100 * cs + "vw)";
+});
+
+rst.addEventListener("click", (e) => {
+  cs = 0;
+  pos.innerHTML = 1;
+  chv.style.transform = "translateX(" + -100 * cs + "vw)";
 });
