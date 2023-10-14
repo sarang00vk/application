@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Series</title>
+    <title>Sarang Project</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,12 +11,12 @@
       rel="stylesheet"
     />
     <link href="/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body class="show">
     <main>
       <div id="tools" class="tools">
         <div class="buttons">
-          <button id="restart" class="restart icon">restart</button>
           <button id="previousChapter" class="pprevious icon">
             previous chapter
           </button>
@@ -24,12 +24,14 @@
           <button id="previousSlide" class="previous icon">
             previous slide
           </button>
+          <button id="restart" class="restart icon">restart</button>
+
           <button id="nextSlide" class="next icon">next slide</button>
         </div>
         <div>
           <span id="titles" class="titles"
-            ><span>Intro (<span class="position">1</span>/12)</span
-            ><span>Tools (<span class="position">1</span>/24)</span
+            ><span>Intro (<span id="intro" class="position">1</span>/12)</span
+            ><span>Tools (<span id="stools" class="position">1</span>/24)</span
             ><span>Content (<span class="position">1</span>/8)</span
             ><span>Presentation (<span class="position">1</span>/12)</span
             ><span>Scripting (<span class="position">1</span>/12)</span
@@ -39,7 +41,7 @@
         </div>
       </div>
       <div id="presentation" class="presentation">
-        <div class="chapter" style="width: 1200vw">
+        <div id="chapter1" class="chapter" style="width: 1200vw">
           <section><h2>Frontend CULS 2022</h2></section>
           <section>
             <h2>Who am I?</h2>
@@ -110,7 +112,7 @@
           </section>
           <section><h2>Let&#39;s Go!</h2></section>
         </div>
-        <div class="chapter" style="width: 2400vw">
+        <div id="chapter2" class="chapter" style="width: 2400vw">
           <section><h2>Tools</h2></section>
           <section><h2>Source Control Management</h2></section>
           <section>
